@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investment Growth Calculator</title>
+</head>
+<body>
+    <header>
+        <!-- website header with a website logo and name (www.svgrepo.com)  -->
+    </header>
+
+    <main>
+        <section id="intro">
+            <p>Curious about your financial future? Use the calculator below to estimate 
+                how much your savings could grow by the time you retire. Simply enter your 
+                <strong>Initial Investment</strong>, your expected 
+                <strong>Annual Interest Rate</strong>, and your target 
+                <strong>Year of Retirement</strong>.</p>
+        </section>
+
+        <form id="investmentForm">
+            <label for="initialInvestment">Initial Investment</label>
+            <input type="text" id="initialInvestment" name="initialInvestment" placeholder="e.g., 5,000" autofocus required >
+            <br>
+
+            <label for="interestRate">Annual Interest Rate</label>
+            <input type="number" id="interestRate" name="interestRate" min="0", max="99" placeholder="e.g., 7" required>
+            <br>
+
+            <label for="retirementYear">Year of Retirement</label>
+            <input type="text" id="retirementYear" name="retirementYear" placeholder="e.g., 2040" required>
+
+            <input type="submit" text="Calculate">
+            <br>
+        </form>
+    </main>
+    
+</body>
+</html>
