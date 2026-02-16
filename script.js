@@ -2,6 +2,10 @@
   Investment Growth Calculator
   Calculates future value using the compound interest formula.
 */
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize all Materialize components at once
+    M.AutoInit();
+});
 
 document.addEventListener("DOMContentLoaded", function () {
     // Get references to HTML elements by their IDs

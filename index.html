@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Investment Growth Calculator</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    
+    <link rel="icon" type="image/svg+xml" href="calculator-svgrepo-com.svg">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- website header with a website logo and name (www.svgrepo.com)  -->
+        <h1><img src="calculator-svgrepo-com.svg" alt="calculator icon" width=28em> Investment Growth Calculator</h1>
     </header>
 
-    <main>
-        <section id="intro">
+    <main class>
+        <section id="intro flow-text">
             <p>Curious about your financial future? Use the calculator below to estimate 
                 how much your savings could grow by the time you retire. Simply enter your 
                 <strong>Initial Investment</strong>, your expected 
@@ -24,22 +24,32 @@
                 <strong>Year of Retirement</strong>.</p>
         </section>
 
-        <form id="investmentForm">
-            <label for="initialInvestment">Initial Investment</label>
-            <input type="text" id="initialInvestment" name="initialInvestment" placeholder="e.g., 5,000" autofocus required >
-            <br>
 
-            <label for="interestRate">Annual Interest Rate</label>
-            <input type="number" id="interestRate" name="interestRate" min="0", max="99" placeholder="e.g., 7" required>
-            <br>
+        <div class="card-panel">
+            <form id="investmentForm">
+                <div class="row">
+                    <div class="input-field col s12 m4">
+                        <label for="initialInvestment">Initial Investment ($)</label>
+                        <input type="number" id="initialInvestment" class="validate" autofocus required>
+                    </div>
 
-            <label for="retirementYear">Year of Retirement</label>
-            <input type="text" id="retirementYear" name="retirementYear" placeholder="e.g., 2040" required>
+                    <div class="input-field col s12 m4">
+                        <label for="interestRate">Annual Interest Rate (%)</label>
+                        <input type="number" id="interestRate" min="0", max="99" class="validate" required>
+                    </div>
 
-            <input type="submit" text="Calculate">
-            <br>
-        </form>
+                    <div class="input-field col s12 m4">
+                        <label for="retirementYear">Year of Retirement (YYYY)</label>
+                        <input type="text" id="retirementYear" class="validate" required>
+                    </div>
+
+                    <input class="btn indigo waves-effect waves-light" type="submit" value="Calculate">
+                </div>
+            </form>
+        </div>
+
     </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
