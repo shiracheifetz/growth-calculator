@@ -23,17 +23,18 @@ document.addEventListener("DOMContentLoaded", function () {
         const interestRate = parseFloat(document.getElementById("interestRate").value);
         const retirementYear = parseFloat(document.getElementById("retirementYear").value);
 
-        const date = new Date(); //current date
+        const date = new Date(); // current date
         const year = date.getFullYear();
         const yearsToGrow = retirementYear - year;
 
-
         const futureValue = initialInvestment * Math.pow((1 + interestRate/100), yearsToGrow) ;
 
-        resultText.innerHTML = "The future value of the investment when you retire is $" + futureValue.toFixed(2);
-        resultText.hidden = false;
+        const formatter = new Intl.NumberFormat('en-US', {
+            style: 'currency',
+            currency: 'USD'
+        });
 
-        // TIP: You can view the form input values using the console for debugging
-        console.log("Form submitted " + resultText.value);
+        resultText.innerHTML = "The future value of the investment when you retire is " + formatter.format(futureValue);
+        resultText.hidden = false;
     });
 });
