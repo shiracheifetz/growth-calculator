@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const futureValue = initialInvestment * Math.pow((1 + interestRate/100), yearsToGrow) ;
 
-        resultText.innerHTML += futureValue.toFixed(2);
+        resultText.innerHTML = "The future value of the investment when you retire is $" + futureValue.toFixed(2);
         resultText.hidden = false;
 
         // TIP: You can view the form input values using the console for debugging
