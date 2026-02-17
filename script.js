@@ -18,7 +18,20 @@ document.addEventListener("DOMContentLoaded", function () {
         // Prevent page refresh
         event.preventDefault();
 
-        // TO DO: calculate the future value of the investment and display the result
+        // calculate the future value of the investment and display the result
+        const initialInvestment = document.getElementById("initialInvestment").value;
+        const interestRate = document.getElementById("interestRate").value;
+        const retirementYear = document.getElementById("retirementYear").value;
+
+        const date = new Date(); //current date
+        const year = date.getFullYear();
+        const yearsToGrow = retirementYear - year;
+
+
+        const futureValue = initialInvestment * Math.pow((1 + interestRate/100), yearsToGrow) ;
+
+        resultText.innerHTML += futureValue.toFixed(2);
+        resultText.hidden = false;
 
         // TIP: You can view the form input values using the console for debugging
         console.log("Form submitted " + resultText.value);
