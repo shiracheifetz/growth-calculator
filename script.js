@@ -19,9 +19,9 @@ document.addEventListener("DOMContentLoaded", function () {
         event.preventDefault();
 
         // calculate the future value of the investment and display the result
-        const initialInvestment = document.getElementById("initialInvestment").value;
-        const interestRate = document.getElementById("interestRate").value;
-        const retirementYear = document.getElementById("retirementYear").value;
+        const initialInvestment = parseFloat(document.getElementById("initialInvestment").value);
+        const interestRate = parseFloat(document.getElementById("interestRate").value);
+        const retirementYear = parseFloat(document.getElementById("retirementYear").value);
 
         const date = new Date(); //current date
         const year = date.getFullYear();
